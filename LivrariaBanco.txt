@@ -1,0 +1,18 @@
+create database dbLivraria;
+use dbLivraria;
+
+create table tbLogin(
+id int primary key auto_increment,
+nome varchar (80),
+email varchar(100) unique,
+senha varchar (30) null,
+senhaHash varchar (50) not null
+ );
+ 
+ create table tblivro(
+ id int primary key auto_increment,
+ isbn varchar (50) not null, 
+ nome varchar (70) null,
+ descricao varchar (150),
+ valor decimal (6,2)
+ );
